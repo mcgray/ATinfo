@@ -12,20 +12,21 @@ import ua.com.mcgray.pageobjects.ATinfoUserDetailsPage;
 @RunWith(ConcordionRunner.class)
 public class ATinfoMcGrayDetailsTest {
 
-	private ATinfoUserDetailsPage userDetailsPage;
+	private ATinfoUserDetailsPage detailsPage;
 
 	@Before
 	public void setUp() {
-		userDetailsPage = PageFactory.initElements(new ChromeDriver(), ATinfoUserDetailsPage.class);
-		userDetailsPage.open("mcgray");
+		detailsPage = PageFactory.initElements(new ChromeDriver(), ATinfoUserDetailsPage.class);
+		detailsPage.open("mcgray");
 	}
 
-	public boolean testThatMcGrayDetailsPageContainsNeededText(String text) {
-		return userDetailsPage.getContent().contains(text);
+	public boolean testThatUserPageContains(String text) {
+		return detailsPage.getContent().contains(text);
 	}
 
 	@After
 	public void tearDown() {
-		userDetailsPage.close();
+		detailsPage.close();
 	}
+
 }

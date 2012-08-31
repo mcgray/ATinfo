@@ -3,23 +3,23 @@
         <link href="../../../concordion.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <h1>AT.info McGray user information test</h1>
+        <h1> test</h1>
         <div class="example">
         	
-        	<h3>Given:</h3>
-        	<p>AT.info site</p>
+        	<h3>Given: AT.info site</h3>
+        	<p></p>
         	
-        	<h3>When:</h3>
-        	<p>Entering "mcgray" user details page</p>
+        	<h3>When: Visitor enters "mcgray" user details page</h3>
+        	<p></p>
         	
         	<h3>Then:</h3>
-        	<p>The page should contain</p>
+        	<p>Page contains</p>
         	<table>
         		<tr>        			
-        			<td concordion:assertTrue="testThatMcGrayDetailsPageContainsNeededText(#TEXT)">mcgray.com.ua</td>
+        			<td concordion:assertTrue = "testThatUserPageContains(#TEXT)">http://mcgray.com.ua</td>
         		</tr>
         		<tr>
-        			<td concordion:assertTrue="testThatMcGrayDetailsPageContainsNeededText(#TEXT)">Testing automation evangelist</td>
+        			<td concordion:assertTrue = "testThatUserPageContains(#TEXT)">Java Software Engineer</td>
         		</tr>
         	</table>
         	
